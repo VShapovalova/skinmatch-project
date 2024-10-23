@@ -10,6 +10,7 @@ const config = {
         'plugin:react-hooks/recommended',
         'plugin:import/recommended',
         'plugin:unicorn/recommended',
+        'plugin:cypress/recommended',
     ],
     settings: {
         react: {
@@ -42,6 +43,15 @@ const config = {
         'import/namespace': [2, { allowComputed: true }],
         'import/first': 'error',
         'import/newline-after-import': 'error',
+        // Додаємо виключення для файлів з абревіатурою "e2e"
+        'unicorn/prevent-abbreviations': [
+            'error',
+            {
+                allowList: {
+                    e2e: true, // Дозволяємо використання "e2e"
+                },
+            },
+        ],
     },
     overrides: [
         {
