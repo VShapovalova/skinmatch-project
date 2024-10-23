@@ -56,7 +56,6 @@ const config = {
                         },
                     },
                 ],
-                'no-unused-vars': 'off',
             },
         },
     ],
