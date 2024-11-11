@@ -5,6 +5,8 @@ const config = {
     entry: path.resolve(__dirname, '../src/index.js'),
     output: {
         path: path.resolve(__dirname, '../dist'),
+        filename: 'bundle.js',
+        publicPath: '/',
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -25,6 +27,13 @@ const config = {
                     },
                 ],
             },
+            {
+                test: /\.(png|jpe?g|gif|svg)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/[name][hash][ext][query]',
+                },
+            },
         ],
     },
     resolve: {
@@ -32,7 +41,12 @@ const config = {
         alias: {
             '@app': path.resolve(__dirname, '../src/'),
             '@components': path.resolve(__dirname, '../src/components'),
+            '@assets': path.resolve(__dirname, '../src/assets'),
         },
+    },
+    devServer: {
+        historyApiFallback: true,
+        static: path.resolve(__dirname, '../dist'),
     },
 };
 

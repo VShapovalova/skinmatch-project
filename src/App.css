@@ -1,4 +1,42 @@
-.main {
-    color: darkred;
-    background-color: cornflowerblue;
+.container {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: #181c1f;
+    color: #f6eee4;
+    margin: 2rem;
 }
+
+.header h1 {
+    margin: 0;
+    color: #48d9f3;
+}
+
+.header p {
+    margin: 0;
+    color: #82c2ce;
+}
+
+.tabs {
+    max-width: 32rem;
+    margin: 2rem 0;
+    overflow: hidden;
+}
+
+.tabs menu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 0.25rem;
+}
+
+.tab-content {
+    background-color: #2d3942;
+    border-radius: 0 4px 4px 4px;
+    padding: 1rem;
+}
+
+.tab-content li {
+    margin: 0.75rem 0;
+}
+
+

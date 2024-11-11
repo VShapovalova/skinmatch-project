@@ -21,7 +21,7 @@ const config = {
                 extensions: ['.js', '.jsx'],
             },
             webpack: {
-                config: './config/webpack.development.config.js',
+                config: './config/webpack.config.js',
             },
         },
     },
@@ -43,12 +43,11 @@ const config = {
         'import/namespace': [2, { allowComputed: true }],
         'import/first': 'error',
         'import/newline-after-import': 'error',
-        // Додаємо виключення для файлів з абревіатурою "e2e"
         'unicorn/prevent-abbreviations': [
             'error',
             {
                 allowList: {
-                    e2e: true, // Дозволяємо використання "e2e"
+                    e2e: true,
                 },
             },
         ],

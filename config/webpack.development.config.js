@@ -9,25 +9,14 @@ const config = {
     module: {
         rules: [
             {
-                test: /\.css$/,
-                use: [
-                    'style-loader',
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            modules: {
-                                mode: 'local',
-                                localIdentName: '[name]__[local]',
-                                namedExport: false,
-                            },
-                        },
-                    },
-                ],
+                test: /\.css$/i,
+                use: ['style-loader', 'css-loader'],
             },
         ],
     },
     devServer: {
-        port: 8080,
+        port: 3000,
+        open: true,
     },
 };
 
